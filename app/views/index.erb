@@ -1,1 +1,12 @@
 <h1>Home Page</h1>
+<% if @current_user %>
+    You are logged in as <%= @current_user %>.<br /><br />
+<% end %>
+
+<% if @message %>
+    <%= @message %><br /><br />
+<% end %>
+
+<% @users.each do |user| %>
+    <%=user.username %><br />
+<% end %>
